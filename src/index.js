@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom/client';
 import Home from './views/Home';
 import Contacts from './views/Contacts';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './Index.css';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
