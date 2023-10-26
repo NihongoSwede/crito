@@ -1633,6 +1633,10 @@ header .container .btn-login {
   text-align: left;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 20px;
+  text-decoration: none;
+}
+.bottom-section1 .container .rightPartsec .divStack a:hover {
+  text-decoration: underline;
 }
 
 .final-part {

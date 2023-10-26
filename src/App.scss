@@ -2317,6 +2317,11 @@ header{
                         text-align: left;
                         color: rgba(255,255,255,0.7 );
                         margin-bottom: 20px;
+                        text-decoration: none;
+
+                        &:hover{
+                            text-decoration: underline;
+                        }
                         
                     }
                     
