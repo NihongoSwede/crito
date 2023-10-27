@@ -29,7 +29,7 @@ const Features = () => {
       <div className="container">
         <div className="features">
           <p>Features</p>
-          <h3>Our accounting is trusted by thousands of companies</h3>
+          <h3>Our accounting is trusted <br/> by thousands of companies</h3>
           <a className="btn-yellow" href="#">
             Learn more
             <i className="fa-solid fa-arrow-up-right"></i>
