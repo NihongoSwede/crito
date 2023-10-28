@@ -15,11 +15,11 @@ const CopyRight = () => {
                 
            
 
-                <div class="socialMediadiv">
-                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://twitter.com/?lang=sv" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
-                    <a href="https://www.instagram.com/mate_lc/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/feed/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <div className="socialMediadiv">
+                    <a href="https://www.facebook.com/" target="_blank"><i className="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/?lang=sv" target="_blank"><i className="fa-brands fa-square-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/mate_lc/" target="_blank"><i className="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/feed/" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
                 </div>
 
                 

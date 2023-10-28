@@ -4,7 +4,6 @@ import woman from '../Assets/Image (4).png'
 
 const AboutCompany = () => {
   return (
-    <section className="aboutCompany">
         <div className="container">
             <img className="woman" src={woman} alt=""/>
 
@@ -35,7 +34,6 @@ const AboutCompany = () => {
                 </div>
             </div>
         </div>
-    </section>
   )
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 const LetsConnect = () => {
   return (
-    <div>
+    
         <section className="connect-header"> 
         <div className="container">
             <div className="top-nav-bar">
@@ -12,9 +12,9 @@ const LetsConnect = () => {
 
             <h3>Let’s Connect</h3>
         </div>
-    </section>
+        </section>
       
-    </div>
+   
   )
 }
 
