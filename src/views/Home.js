@@ -17,7 +17,7 @@ import FormSignup from '../Components/FormSignup';
 
 const Home = () => {
   return (
-    <div>
+    <>
       <NavbarHigh/>
       <ShowCase/>
       <CompanyShowcase/>
@@ -33,7 +33,7 @@ const Home = () => {
       <FooterPart />
       <CopyRight/>
       
-    </div>
+    </>
   )
 }
 

@@ -1801,7 +1801,7 @@ header{
             
             gap: 85px;
 
-            @media (max-width: 1024px){
+            @media (max-width: 1072px){
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: auto 1fr auto;
                 gap: 30px;
@@ -1824,6 +1824,8 @@ header{
                     margin-bottom: 20px;
     
                 }
+
+                
     
                 p{
                     font-family: "Inter";
@@ -1864,7 +1866,7 @@ header{
                         
                         h4{
                             font-family: "DM Sans";
-                            font-size: 22px;
+                            font-size: 20px;
                             font-weight: bold;
                             font-style: normal;
                             color: #191919;

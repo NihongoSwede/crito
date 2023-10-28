@@ -9,7 +9,7 @@ import CopyRight from '../Components/CopyRight'
 
 const Contacts = () => {
   return (
-    <div>
+    <>
       <NavbarHigh/>
       <LetsConnect/>
       <ConnectOptions/>
@@ -18,7 +18,7 @@ const Contacts = () => {
       <FooterPart/>
       <CopyRight/>
     
-    </div>
+    </>
   )
 }
 

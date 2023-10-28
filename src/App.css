@@ -1323,7 +1323,7 @@ header .container .btn-login {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 85px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1072px) {
   .testimonials .white-box .container .testimonials-stack {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr auto;
@@ -1366,7 +1366,7 @@ header .container .btn-login {
 }
 .testimonials .white-box .container .testimonials-stack .testimonials-column .text-img-stack .text-stack h4 {
   font-family: "DM Sans";
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   font-style: normal;
   color: #191919;
