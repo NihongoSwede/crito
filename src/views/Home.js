@@ -33,6 +33,8 @@ const Home = () => {
       <FooterPart />
       <CopyRight/>
       
+
+      
     </>
   )
 }

@@ -1,102 +1,70 @@
-import React from 'react'
-import pic1 from '../Assets/articles-news-pic/Image (10).png'
-import pic2 from '../Assets/articles-news-pic/Image (11).png'
-import pic3 from '../Assets/articles-news-pic/Image (12).png'
-import dots from '../Assets/DotsIMG/dot(1) (1).svg'
-import { useEffect, useState } from 'react'
-const url = "https://win23-assignment.azurewebsites.net/api/articles"
+import React, { useEffect, useState } from 'react';
+import dots from '../Assets/DotsIMG/dot(1) (1).svg';
+
+const url = "https://win23-assignment.azurewebsites.net/api/articles";
 
 const ArticleNews = () => {
     const [results, setResults] = useState([]);
     const controller = new AbortController();
 
-    useEffect(() =>{
-
-        async function getData(){
-            const response = await fetch(url, {signal: controller})
-            const data = await response.json();
-            setResults(data);
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const response = await fetch(url, { signal: controller.signal });
+                const data = await response.json();
+                setResults(data);
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
         }
 
-        getData();
+        fetchData();
+    }, []);
 
-        console.log(results, "results")
-    
-        return () => {
-            controller.abort();
-        };
+    const limitedResults = results.slice(0, 3); // Limit to the first 3 articles
 
-    } ,[])
-    
-    
+    return (
+        <section className="articles-news">
+            <div className="container">
+                <h4 className="article-header">Article & News</h4>
+                <div className="top-art-head">
+                    <h3>Get Every Single Article & News</h3>
+                    <a className="trn-btn-art-sec" href="">
+                        <span>Browse Articles</span> <i className="fa-solid fa-arrow-up-right"></i>
+                    </a>
+                </div>
 
-  return (
-    
+                <div className="article-showcase">
+                    {limitedResults.map((article, index) => {
+                        const unixTimestamp = Math.floor(new Date(article.published).getTime() / 1000); // Convert to Unix timestamp
+                        const date = new Date(unixTimestamp * 1000); // Convert Unix timestamp to milliseconds
+                        const dayOfMonth = date.getDate();
 
-    <section className="articles-news">
-        <div className="container">
-            <h4 className="article-header">Article & News</h4>
-            <div className="top-art-head">
-                <h3>Get Every Single Article & News</h3>
-                <a className="trn-btn-art-sec" href=""><span>Browse Articles</span> <i className="fa-solid fa-arrow-up-right"></i></a>
+                        return (
+                            <div className="article-stack" key={index}>
+                                <div className="img-yellow-stack">
+                                    <img src={article.imageUrl} alt={article.title} />
+                                    <div className="yellow-box">
+                                        <h5>{dayOfMonth}</h5>
+                                        <p>Mar</p>
+                                    </div>
+                                </div>
+                                <div className="experiment">
+                                    <p>{article.category}</p>
+                                    <h3 className="newsInfo">{article.title}</h3>
+                                    <p>{article.content}</p>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+
+                <div className="img-article-dots-container">
+                    <img src={dots} alt="" />
+                </div>
             </div>
-
-            <div className="article-showcase">
-                <div className="article-stack">
-                    <div className="img-yellow-stack">
-                        <img src={pic1} alt=""/>
-                        <div className="yellow-box">
-                            <h5>25</h5>
-                            <p>Mar</p> 
-                        </div>
-                    </div>
-                    <div className="experiment">
-                        <p>Business</p>
-                        <h3 className="newsInfo">How To Use Digitalization in the classroom</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
-                    </div>
-                </div>
-
-                <div className="article-stack">
-                    <div className="img-yellow-stack">
-                        <img src={pic2} alt=""/>
-                        <div className="yellow-box">
-                            <h5>17</h5>
-                            <p>Mar</p> 
-                        </div>
-                    </div>
-                    <div className="experiment">
-                        <p>Business</p>
-                        <h3 className="newsInfo">How To Implement Chat GPT In Your Projects</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
-                    </div>
-                </div>
-        
-
-                
-
-                <div className="article-stack">
-                    <div className="img-yellow-stack">
-                        <img src={pic3} alt=""/>
-                        <div className="yellow-box">
-                            <h5>13</h5>
-                            <p>Mar</p> 
-                        </div>
-                    </div>
-                    <div className="experiment">
-                        <p>Business</p>
-                        <h3 className="newsInfo">The Guide To Support Modern CSS Design</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
-                    </div>
-                </div>
-                
-            </div>
-            <div className="img-article-dots-container">
-                <img src={dots} alt=""/>
-            </div>         
-        </div>
-    </section>
-  )
+        </section>
+    );
 }
 
-export default ArticleNews
+export default ArticleNews;

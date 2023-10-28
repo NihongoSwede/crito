@@ -1440,8 +1440,8 @@ header .container .btn-login {
   position: relative;
 }
 .articles-news .container .article-showcase .article-stack .img-yellow-stack img {
-  max-width: 100%; /* Adjust this as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%; /* Adjust this as needed */
+  height: 16.75rem; /* Maintain aspect ratio */
   margin-bottom: 28px;
 }
 .articles-news .container .article-showcase .article-stack .img-yellow-stack .yellow-box {
