@@ -21,7 +21,7 @@ const ArticleNews = () => {
         fetchData();
     }, []);
 
-    const limitedResults = results.slice(0, 3); // Limit to the first 3 articles
+    const limitedResults = results.slice(0, 3); 
 
     return (
         <section className="articles-news">
@@ -40,13 +40,26 @@ const ArticleNews = () => {
                         const date = new Date(unixTimestamp * 1000); // Convert Unix timestamp to milliseconds
                         const dayOfMonth = date.getDate();
 
+                        function getThreeLetterMonth(month) {
+                            const months = [
+                                "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                                "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+                            ];
+                        
+                            if (month >= 1 && month <= 12) {
+                                return months[month - 1];
+                            }
+                        
+                            return "";
+                        }
+
                         return (
                             <div className="article-stack" key={index}>
                                 <div className="img-yellow-stack">
                                     <img src={article.imageUrl} alt={article.title} />
                                     <div className="yellow-box">
                                         <h5>{dayOfMonth}</h5>
-                                        <p>Mar</p>
+                                        <p>{getThreeLetterMonth(date.getMonth() + 1)}</p> 
                                     </div>
                                 </div>
                                 <div className="experiment">
