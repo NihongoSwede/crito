@@ -9,7 +9,7 @@ const NavbarHigh = () => {
             
             <div className="container">
                 <img src={logo} alt="crito-logotype"/>
-                <button className="menu-bars"><i class="fa-solid fa-bars-staggered"></i></button>
+                <button className="menu-bars"><i className="fa-solid fa-bars-staggered"></i></button>
                 <div className="menu">
                     <div className="top-menu">
                         <div className="contact-information">

@@ -3,9 +3,36 @@ import pic1 from '../Assets/articles-news-pic/Image (10).png'
 import pic2 from '../Assets/articles-news-pic/Image (11).png'
 import pic3 from '../Assets/articles-news-pic/Image (12).png'
 import dots from '../Assets/DotsIMG/dot(1) (1).svg'
+import { useEffect, useState } from 'react'
+const url = "https://win23-assignment.azurewebsites.net/api/articles"
 
 const ArticleNews = () => {
+    const [results, setResults] = useState([]);
+    const controller = new AbortController();
+
+    useEffect(() =>{
+
+        async function getData(){
+            const response = await fetch(url, {signal: controller})
+            const data = await response.json();
+            setResults(data);
+        }
+
+        getData();
+
+        console.log(results, "results")
+    
+        return () => {
+            controller.abort();
+        };
+
+    } ,[])
+    
+    
+
   return (
+    
+
     <section className="articles-news">
         <div className="container">
             <h4 className="article-header">Article & News</h4>
@@ -25,7 +52,7 @@ const ArticleNews = () => {
                     </div>
                     <div className="experiment">
                         <p>Business</p>
-                        <h3 className="newsInfo">How To Use Digitalization in the classNameroom</h3>
+                        <h3 className="newsInfo">How To Use Digitalization in the classroom</h3>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
                     </div>
                 </div>
