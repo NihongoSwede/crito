@@ -1,5 +1,4 @@
 import React from 'react'
-import '../App.css'
 import bottomlogo from '../Assets/Logo (1).svg'
 
 const FooterPart = () => {

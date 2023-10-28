@@ -1,5 +1,4 @@
 import React from 'react'
-import '../App.css'
 import stripes from '../Assets/Stripes/EWlement.png'
 import woman from '../Assets/Image (4).png'
 
