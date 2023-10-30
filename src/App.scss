@@ -8,6 +8,31 @@ html, body{
     padding: 0;
 }
 
+#firstName-error{
+    padding: 10px;
+    font-size: 0.8 rem;
+    color: #df4747;
+}
+
+#email-error{
+    padding: 10px;
+    font-size: 0.8 rem;
+    color: #df4747;
+}
+
+#message-error{
+    padding: 10px;
+    font-size: 0.8 rem;
+    color: #df4747;
+}
+
+
+.error{
+    color: #df4747;
+    border: 1px solid #df4747;
+    background-color: #fff5f5;
+}
+
 .btn-yellow{
     background-color: #F9D783;
     border: solid 1px #F9D783;
