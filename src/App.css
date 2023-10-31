@@ -1883,3 +1883,78 @@ iframe {
   border: 0px;
   margin: 0;
 }
+
+.LongArticleNews .container {
+  display: flex;
+  gap: 142px;
+  margin-top: 136px;
+}
+.LongArticleNews .container .articleContainer {
+  width: 768px;
+  display: flex;
+  flex-direction: column;
+}
+.LongArticleNews .container .articleContainer h3 {
+  font-size: 43px;
+  margin-bottom: 27px;
+}
+.LongArticleNews .container .articleContainer .articleGroupsheader .articlepart1 {
+  display: flex;
+  gap: 40px;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 72px;
+}
+.LongArticleNews .container .articleContainer .articleGroupsheader .articlepart1 p {
+  font-size: 20px;
+  font-family: "DM Sans";
+  color: #191919;
+}
+.LongArticleNews .container .articleContainer .articleGroupsheader .articlepart1 img {
+  margin-bottom: 20px;
+}
+.LongArticleNews .container .articleContainer .articleLongtext {
+  margin-top: 53px;
+}
+.LongArticleNews .container .articleContainer .articleLongtext .articleLongtextSection {
+  margin-bottom: 100px;
+}
+.LongArticleNews .container .articleContainer .articleLongtext .articleLongtextSection .paragraphformat {
+  font-size: 16px;
+  margin-bottom: 50px;
+  color: #B5B5B5;
+}
+.LongArticleNews .container .articleContainer .articleLongtext .quotationbox {
+  display: flex;
+  margin-bottom: 73px;
+}
+.LongArticleNews .container .articleContainer .articleLongtext .quotationbox .flexquotation img {
+  margin-right: 22px;
+}
+.LongArticleNews .container .articleContainer .articleLongtext .quotationbox .quotationtext {
+  font-family: "DM Sans";
+  font-size: 22px;
+}
+.LongArticleNews .container .articleContainer .articleLongtext .paragraphformat {
+  font-size: 16px;
+  margin-bottom: 50px;
+  color: #B5B5B5;
+}
+.LongArticleNews .container .articleContainer .articleLongtext .buttonStack {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 42px;
+}
+.LongArticleNews .container .articleContainer .articleLongtext .buttonStack .button-unit .grey-btn-article {
+  color: #707070;
+  padding: 15px 25px;
+  border-radius: 25px;
+  border: 1px solid #707070;
+}
+.LongArticleNews .container .articleContainer .articleLongtext .buttonStack .button-unit .grey-btn-article .button-text {
+  margin-bottom: 0px;
+}
+.LongArticleNews .container .sideContainer .search-container {
+  width: 420px;
+  margin-top: 135px;
+}

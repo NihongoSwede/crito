@@ -2702,3 +2702,161 @@ iframe{
     border: 0px;
     margin: 0;
 }
+
+.LongArticleNews{
+    .container{
+        display: flex;
+        gap: 142px;
+        margin-top: 136px;
+
+        .articleContainer{
+            width: 768px;
+            display: flex;
+            flex-direction: column;
+
+            h3{
+                font-size: 43px;
+                margin-bottom: 27px;
+
+            }
+
+            .articleGroupsheader{
+
+                .articlepart1{
+                    display: flex;
+                    gap: 40px;
+                    flex-direction: row;
+                    align-items: center;
+                    margin-bottom: 72px;
+
+                    p{
+                        font-size: 20px;
+                        font-family: "DM Sans";
+                        color: #191919;
+    
+                    }
+
+                    img{
+                        margin-bottom: 20px;
+                    }
+    
+
+                }
+                                
+                
+
+            }
+
+            img{
+
+            }
+
+            .articleLongtext{
+                margin-top: 53px;
+
+                .articleLongtextSection{
+                    margin-bottom: 100px;
+                    
+
+                    .paragraphformat{
+                        font-size: 16px;
+                        margin-bottom: 50px;
+                        color: #B5B5B5;
+                        
+
+                    }
+
+
+
+
+                }
+                
+                
+
+                .quotationbox{
+                    display: flex;
+                    margin-bottom: 73px;
+                    
+                    .flexquotation{
+                        img{
+                            margin-right: 22px;
+
+                        }
+                    }
+
+                    .quotationtext{
+                        font-family: "DM Sans";
+                        font-size: 22px;  
+                    }
+                }
+
+                .paragraphformat{
+                    font-size: 16px;
+                    margin-bottom: 50px;
+                    color: #B5B5B5;
+                    
+
+                }
+
+                .buttonStack{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 42px;
+                    
+
+                    .button-unit{
+                        .grey-btn-article{
+                            color: #707070;
+                            padding: 15px 25px;
+                            border-radius: 25px;
+                            border: 1px solid #707070;
+    
+                            .button-text{
+                                margin-bottom: 0px;
+                            }
+                        }
+
+                    }
+                
+                    
+                
+                }
+            }
+
+        }
+
+        .sideContainer{
+            .search-container{
+                width: 420px;
+                margin-top: 135px;
+
+                .search-icon{
+                    i {
+
+                    }
+
+                    .search-input{
+
+                    }
+                }
+
+            }
+
+            .recent-posts{
+                h3{
+
+                }
+
+                p{
+
+                }
+            }
+
+            .categories{
+                p{
+
+                }
+            }
+        }
+    }
+}

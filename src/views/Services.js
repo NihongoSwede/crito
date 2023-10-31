@@ -4,12 +4,14 @@ import NewsArticleshead from '../Components/NewsArticleshead'
 import ArticleNews from '../Components/ArticleNews'
 import FooterPart from '../Components/FooterPart'
 import CopyRight from '../Components/CopyRight'
+import LongArticleNews from '../Components/LongArticleNews'
 
 const Sercies = () => {
   return (
     <>
       <NavbarHigh/>
       <NewsArticleshead/>
+      <LongArticleNews/>
       <ArticleNews/>
       <FooterPart/>
       <CopyRight/>
