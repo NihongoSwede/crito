@@ -1949,12 +1949,84 @@ iframe {
   color: #707070;
   padding: 15px 25px;
   border-radius: 25px;
-  border: 1px solid #707070;
+  border: none;
+  border: 1px solid;
+}
+.LongArticleNews .container .articleContainer .articleLongtext .buttonStack .button-unit .grey-btn-article:hover {
+  background-color: #F9D783;
+  color: #191919;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  text-decoration: underline;
 }
 .LongArticleNews .container .articleContainer .articleLongtext .buttonStack .button-unit .grey-btn-article .button-text {
   margin-bottom: 0px;
 }
-.LongArticleNews .container .sideContainer .search-container {
-  width: 420px;
-  margin-top: 135px;
+.LongArticleNews .container .sideContainer .searchbox {
+  width: 100%;
+  display: inline-block;
+  border-radius: 25px;
+  padding: 15px 30px;
+  background-color: #f3f3f3;
+  margin-bottom: 40px;
+  margin-top: 240px;
+}
+.LongArticleNews .container .sideContainer i {
+  padding-right: 10px;
+}
+.LongArticleNews .container .sideContainer input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.LongArticleNews .container .sideContainer .recent-posts {
+  border: 2px solid RGBA(25, 25, 25, 0.2);
+}
+.LongArticleNews .container .sideContainer .recent-posts .innercontainer {
+  margin: 43px;
+}
+.LongArticleNews .container .sideContainer .recent-posts .innercontainer h2 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+}
+.LongArticleNews .container .sideContainer .recent-posts .innercontainer h3 {
+  font-size: 16px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+}
+.LongArticleNews .container .sideContainer .recent-posts .innercontainer .border-div {
+  border-bottom: 2px solid RGBA(25, 25, 25, 0.2);
+  margin-bottom: 20px;
+}
+.LongArticleNews .container .sideContainer .recent-posts .innercontainer .border-div p {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  color: #B5B5B5;
+}
+.LongArticleNews .container .sideContainer .recent-posts .innercontainer div {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  color: #B5B5B5;
+}
+.LongArticleNews .container .sideContainer .categories {
+  border: 2px solid RGBA(25, 25, 25, 0.2);
+  margin-top: 40px;
+}
+.LongArticleNews .container .sideContainer .categories .innercontainer {
+  margin: 43px;
+}
+.LongArticleNews .container .sideContainer .categories .innercontainer h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+.LongArticleNews .container .sideContainer .categories .innercontainer div p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #B5B5B5;
+}
+.LongArticleNews .container .sideContainer .categories .innercontainer div p .spanclass {
+  color: #191919;
 }

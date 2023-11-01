@@ -155,79 +155,124 @@ const LongArticleNews = () => {
             </div>
             
             <div className='sideContainer'>
-                <div className="search-container">
-                    <div className="search-icon">
-                        <i className="fa-light fa-magnifying-glass"></i>
-                    </div>
-                    <input type="text" className="search-input" placeholder="Type to search..." />
-                </div>
+
+                <form className='searchbox'>
+                    <i className='fa-solid fa-magnifying-glass'></i>
+                    <input type='text' placeholder='Type of search'/>
+                </form>
 
                 <div className='recent-posts'>
-                    <h3>
-                    Recent posts
-                    </h3>
+                    <div className='innercontainer'>
+                        <h2>
+                        Recent posts
+                        </h2>
 
-                    <h3>
-                    How To Blow Through Capital At An Incredible Rate
-                    </h3>
+                        <h3>
+                        How To Blow Through Capital At An Incredible Rate
+                        </h3>
 
-                    <p>
-                    Jan 14, 2020
-                    </p>
+                        <div className='border-div'>
+                            <p>
+                            Jan 14, 2020
+                            </p>
+                        </div>
 
 
-                    <h3>
-                    How To Blow Through Capital At An Incredible Rate
-                    </h3>
+                        <h3>
+                        How To Blow Through Capital At An Incredible Rate
+                        </h3>
 
-                    <p>
-                    Jan 14, 2020
-                    </p>
+                        <div className='border-div'>
+                            <p>
+                            Jan 14, 2020
+                            </p>
+                        </div>
 
-                    <h3>
-                    How did we get 1M+ visitors in 30 days without anything!                    
-                    </h3>
+                        <h3>
+                        How did we get 1M+ visitors in 30 days without anything!                    
+                        </h3>
 
-                    <p>
-                    Jan 14, 2020
-                    </p>
+                        <div className='border-div'>
+                            <p>
+                            Jan 14, 2020
+                            </p>
+                        </div>
 
-                    <h3>
-                    Figma On Figma: How We Built Our Website Design System
-                    </h3>
+                        <h3>
+                        Figma On Figma: How We Built Our Website Design System
+                        </h3>
 
-                    <p>
-                    Jan 14, 2020
-                    </p>
+                        <div>
+                            <p>
+                            Jan 14, 2020
+                            </p>
+                        </div>
+
+                    </div>
 
                 </div>
 
                 <div className='categories'>
 
-                    <p>
-                    Technology  -  20 Posts
-  
-                    </p>
+                        <div className='innercontainer'>
+                        <h3>Categories</h3>
 
-                    <p>
-                    Writing  -  16 Posts
-  
-                    </p>
+                        <div>
+                        
+                            <p>
 
-                    <p>
-                    Marketing  -  11 Posts
-  
-                    </p>
+                            <span className='spanclass'>Technology -   </span>
+                            20 Posts
 
-                    <p>
-                    Business  -  35 Posts
-  
-                    </p>
+                            </p>
+    
+                        </div>
 
-                    <p>
-                    Education  -  14 Posts
-  
-                    </p>
+                        <div>
+                        
+                            <p>
+
+                            <span className='spanclass'>Freelancing -   </span>
+                            07 Posts
+
+                            </p>
+    
+                        </div>
+
+                        <div>
+
+                            <p>
+                            <span className='spanclass'>Writing -   </span>   16 Posts
+                            </p>
+                        
+    
+                        </div>
+
+                        <div>
+                            
+                            <p><span className='spanclass'>Marketing -</span>   11 Posts</p>
+
+                            
+                        </div>
+
+                        <div>
+                            <p>
+                            <span className='spanclass'>Business -   </span>
+                                  35 Posts
+                            </p>
+    
+                        </div>
+
+                        <div>
+                            <p>
+                            <span className='spanclass'>Education -    </span>
+                            14 Posts
+                            </p>
+                    
+    
+                        </div>
+
+                    </div>
 
                 </div>
 

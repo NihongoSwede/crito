@@ -2809,7 +2809,19 @@ iframe{
                             color: #707070;
                             padding: 15px 25px;
                             border-radius: 25px;
-                            border: 1px solid #707070;
+                            border: none;
+                            border: 1px solid;
+
+                            &:hover {
+                                background-color: #F9D783;
+                                
+                                color:  #191919;
+                                transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+                                text-decoration: underline;
+                        
+                                
+                            }
+                            
     
                             .button-text{
                                 margin-bottom: 0px;
@@ -2826,35 +2838,107 @@ iframe{
         }
 
         .sideContainer{
-            .search-container{
-                width: 420px;
-                margin-top: 135px;
+            
+                
 
-                .search-icon{
-                    i {
+                .searchbox{
+                    width: 100%;
+                    display: inline-block;
+                    border-radius: 25px;
+                    padding: 15px 30px;
+                    background-color: #f3f3f3;
+                    margin-bottom: 40px;
+                    margin-top: 240px;
 
-                    }
-
-                    .search-input{
-
-                    }
                 }
 
-            }
+                i{
+                    padding-right: 10px;
+                    
+                }
+
+                input{
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                }
+
+            
 
             .recent-posts{
-                h3{
+                border: 2px solid RGBA(25,25,25,0.2 ); 
 
-                }
 
-                p{
+                .innercontainer{
+                    
+                    margin: 43px;
 
+                    h2{
+                        font-size: 22px;
+                        margin-bottom: 30px;
+                        font-family: 'DM Sans', sans-serif;
+                        font-weight: 700;
+                    
+                    }
+
+                    h3{
+                        font-size: 16px;
+                        font-family: 'DM Sans', sans-serif;
+                        font-weight: 700;
+                        
+                    }
+                
+    
+                    .border-div{
+                        
+                        border-bottom: 2px solid RGBA(25,25,25,0.2);
+                        margin-bottom: 20px;
+
+                        p{
+                            font-size: 14px;
+                            font-family: 'Inter', sans-serif;
+                            color: #B5B5B5;
+                            
+                        }
+    
+                    }
+
+                    div{
+                        font-size: 14px;
+                        font-family: 'Inter', sans-serif;
+                        color: #B5B5B5;
+                    }
                 }
             }
 
             .categories{
-                p{
+                border: 2px solid RGBA(25,25,25,0.2 ); 
+                margin-top: 40px;
 
+                .innercontainer{
+                    margin: 43px;
+                    
+                    h3{
+                        font-size: 22px;
+                        font-weight: 700;
+                        margin-bottom: 35px;
+
+                    }
+    
+                    div{
+                       
+                        p{
+                            font-family: 'DM Sans', sans-serif;
+                            font-size: 16px;
+                            font-weight: 700;
+                            color: #B5B5B5;
+
+                            .spanclass{
+                                color: #191919;
+                            }
+                        }
+    
+                    }
                 }
             }
         }
