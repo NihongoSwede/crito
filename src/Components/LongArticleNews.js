@@ -164,7 +164,7 @@ const LongArticleNews = () => {
                 <div className='recent-posts'>
                     <div className='innercontainer'>
                         <h2>
-                        Recent posts
+                        <u>Rece</u>nt posts
                         </h2>
 
                         <h3>
@@ -215,7 +215,7 @@ const LongArticleNews = () => {
                 <div className='categories'>
 
                         <div className='innercontainer'>
-                        <h3>Categories</h3>
+                        <h3><u>Cate</u>gories</h3>
 
                         <div>
                         
