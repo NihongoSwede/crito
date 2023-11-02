@@ -1775,7 +1775,7 @@ header .container .btn-login {
   justify-content: center;
   border: 1px solid #D4D4D4;
   width: 100%;
-  height: 180px;
+  height: 200px;
   text-decoration: none;
 }
 .connect-options .container .connect-box .connect-itemstack .circle-black {
@@ -1788,14 +1788,14 @@ header .container .btn-login {
   align-items: center;
   border-radius: 50%;
   margin-right: 20px;
-  margin-top: 35px;
+  margin-top: 55px;
 }
 .connect-options .container .connect-box .connect-itemstack .circle-black i {
   font-size: 20px;
   color: white;
 }
 .connect-options .container .connect-box .connect-itemstack .stack-text {
-  margin-top: 35px;
+  margin-top: 55px;
 }
 .connect-options .container .connect-box .connect-itemstack .stack-text h3 {
   font-family: "DM Sans";
