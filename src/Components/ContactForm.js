@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ContactForm = () => {
   const [formErrors, setFormErrors] = useState({});
   const [statusMessage, setStatusMessage] = useState(null);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    email: '',
+    message: '',
+  });
 
   const errorMessages = {
     firstName_required: 'Du måste ange ett förnamn',
@@ -34,7 +39,7 @@ const ContactForm = () => {
   const validateLength = (value, minLength = 2) => {
     return value.length >= minLength;
   };
-  
+
   const validateEmail = (value) => {
     return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/.test(value);
   };
@@ -49,15 +54,17 @@ const ContactForm = () => {
       } else if (!validate(value, type, id)) {
         setFormErrors({ ...formErrors, [id]: errorMessages[`${id}_invalid`] });
       }
+  
+      setFormData({ ...formData, [id]: value });
     }
   };
   
   const handleForm = async (event) => {
     event.preventDefault();
-
+  
     const elements = event.target.elements;
     let errors = {};
-
+  
     for (let i = 0; i < elements.length; i++) {
       const element = elements[i];
       if (element.tagName === 'INPUT' && element.required) {
@@ -67,18 +74,18 @@ const ContactForm = () => {
         }
       }
     }
-
+  
     setFormErrors(errors);
-
+  
     if (Object.keys(errors).length === 0) {
       const user = {
-        name: event.target['firstName'].value,
-        email: event.target['email'].value,
-        message: event.target['message'].value,
+        name: formData.firstName,
+        email: formData.email,
+        message: formData.message,
       };
-
+  
       const json = JSON.stringify(user);
-
+  
       try {
         const res = await fetch("https://win23-assignment.azurewebsites.net/api/contactform", {
           method: "post",
@@ -87,15 +94,19 @@ const ContactForm = () => {
           },
           body: json,
         });
-
-        if (res.status === 201) {
-          const data = await res.json();
+  
+        if (res.status === 200) {
           setStatusMessage({
             type: 'success',
             message: 'Du har lyckats registrera en user!',
           });
-          
-
+  
+          // Reset the form data
+          setFormData({
+            firstName: '',
+            email: '',
+            message: '',
+          });
         } else {
           const data = await res.text();
           setStatusMessage({
@@ -109,10 +120,23 @@ const ContactForm = () => {
     }
   };
 
+  
+  useEffect(() => {
+    if (statusMessage && statusMessage.type === 'success') {
+      const timeout = setTimeout(() => {
+        setStatusMessage(null);
+        window.location.reload();
+        
+      }, 5000);
+      return () => clearTimeout(timeout);
+    }
+}, [statusMessage]);
+
+
   return (
     <section className="contact-form">
       <div className="container">
-        <h3>Leave us a message <br /> for any Information</h3>
+        <h3>Leave us a message for any Information</h3>
 
         <form className="formPart" id="registerForm" method="post" onSubmit={handleForm} noValidate>
           <input
