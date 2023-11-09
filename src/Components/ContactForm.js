@@ -4,11 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const ContactForm = () => {
   const [formErrors, setFormErrors] = useState({});
   const [statusMessage, setStatusMessage] = useState(null);
+  const [formKey, setFormKey] = useState(0);
   const [formData, setFormData] = useState({
     firstName: '',
     email: '',
     message: '',
   });
+  
 
   const errorMessages = {
     firstName_required: 'Du måste ange ett förnamn',
@@ -101,12 +103,14 @@ const ContactForm = () => {
             message: 'Du har lyckats registrera en user!',
           });
   
-          // Reset the form data
+          
           setFormData({
             firstName: '',
             email: '',
             message: '',
           });
+
+          setFormKey((prevKey) => prevKey + 1);
         } else {
           const data = await res.text();
           setStatusMessage({
@@ -125,7 +129,7 @@ const ContactForm = () => {
     if (statusMessage && statusMessage.type === 'success') {
       const timeout = setTimeout(() => {
         setStatusMessage(null);
-        window.location.reload();
+       
         
       }, 5000);
       return () => clearTimeout(timeout);
@@ -138,7 +142,7 @@ const ContactForm = () => {
       <div className="container">
         <h3>Leave us a message for any Information</h3>
 
-        <form className="formPart" id="registerForm" method="post" onSubmit={handleForm} noValidate>
+        <form key={formKey} className="formPart" id="registerForm" method="post" onSubmit={handleForm} noValidate>
           <input
             id="firstName"
             name="firstName"
