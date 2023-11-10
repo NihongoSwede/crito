@@ -1417,8 +1417,12 @@ header .container .btn-login {
   }
 }
 
+.articles-news {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 .articles-news .container .article-header {
-  margin-top: 120px;
+  margin-top: 40px;
   font-family: "Inter";
   font-size: 18px;
   font-weight: 500;
@@ -1944,6 +1948,7 @@ iframe {
   display: flex;
   justify-content: space-between;
   margin-top: 42px;
+  margin-bottom: 64px;
 }
 .LongArticleNews .container .articleContainer .articleLongtext .buttonStack .button-unit .grey-btn-article {
   color: #707070;

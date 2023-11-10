@@ -3,7 +3,7 @@ import dots from '../Assets/DotsIMG/dot(1) (1).svg';
 
 const url = "https://win23-assignment.azurewebsites.net/api/articles";
 
-const ArticleNews = () => {
+const ArticleNews = (props) => {
     const [results, setResults] = useState([]);
     const controller = new AbortController();
 
@@ -24,7 +24,7 @@ const ArticleNews = () => {
     const limitedResults = results.slice(0, 3); 
 
     return (
-        <section className="articles-news">
+        <section className="articles-news" style={{ backgroundColor: props.backgroundColor }}>
             <div className="container">
                 <h4 className="article-header">Article & News</h4>
                 <div className="top-art-head">

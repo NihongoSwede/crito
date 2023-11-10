@@ -6,13 +6,15 @@ import FooterPart from '../Components/FooterPart'
 import CopyRight from '../Components/CopyRight'
 import LongArticleNews from '../Components/LongArticleNews'
 
-const Sercies = () => {
+const Sevices = () => {
+  const backgroundColor1 = '#F0EFE9';
   return (
     <>
+    
       <NavbarHigh/>
       <NewsArticleshead/>
       <LongArticleNews/>
-      <ArticleNews/>
+      <ArticleNews backgroundColor={backgroundColor1}/>
       <FooterPart/>
       <CopyRight/>
       
@@ -21,4 +23,4 @@ const Sercies = () => {
   )
 }
 
-export default Sercies
+export default Sevices
