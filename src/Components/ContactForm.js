@@ -104,7 +104,7 @@ const ContactForm = () => {
         if (res.status === 200) {
           setStatusMessage({
             type: 'success',
-            message: 'Du har lyckats registrera en user!',
+            message: 'Formuläret har skickats',
           });
 
           
