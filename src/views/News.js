@@ -1,18 +1,18 @@
 import React from 'react'
 import NavBarHigh from '../Components/NavbarHigh';
-import OurNewsPlusArticles from '../Components/OurNewsPlusArticles';
+import ArticleNews from '../Components/ArticleNews';
 import FooterPart from '../Components/FooterPart';
 import CopyRight from '../Components/CopyRight';
 import FormSignup from '../Components/FormSignup';
 import NewsArticleshead from '../Components/NewsArticleshead';
-// Lägg till mittendelen för artikeln här sedan...
+
 
 const News = () => {
   return (
     <>
     <NavBarHigh/>
     <NewsArticleshead/>
-    <OurNewsPlusArticles/>
+    <ArticleNews sliceNumber={9}/>
     <FormSignup/>
     <FooterPart/>
     <CopyRight/>

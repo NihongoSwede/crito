@@ -21,7 +21,7 @@ const ArticleNews = (props) => {
         fetchData();
     }, []);
 
-    const limitedResults = results.slice(0, 3); 
+    const limitedResults = results.slice(0, props.sliceNumber || 3);
 
     return (
         <section className="articles-news" style={{ backgroundColor: props.backgroundColor }}>
