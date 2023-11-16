@@ -1,11 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import largepic from '../Assets/largepic.svg';
 import quotationmark from '../Assets/quotationmark.svg';
 import oval1 from '../Assets/Oval.svg';
 import oval2 from '../Assets/Oval Copy.svg';
+import { useParams } from 'react-router-dom';
+
 
 const LongArticleNews = () => {
+    const { articleId } = useParams();
+    const [article, setArticle] = useState(null);
+
+    useEffect(() => {
+        const apiUrl = `https://win23-assignment.azurewebsites.net/api/articles/${articleId}`;
+
+        const fetchData = async () => {
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                setArticle(data);
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        };
+
+        fetchData();
+    }, [articleId]);
+
+    
+    
     return (
+
         <section className="LongArticleNews">
             <div className="container">
                 <div className="articleContainer">

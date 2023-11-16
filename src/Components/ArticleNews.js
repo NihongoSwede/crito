@@ -1,7 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import dots from '../Assets/DotsIMG/dot(1) (1).svg';
+import { Link } from 'react-router-dom';
 
 const url = "https://win23-assignment.azurewebsites.net/api/articles";
+
+function getThreeLetterMonth(month) {
+    const months = [
+        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ];
+
+    if (month >= 1 && month <= 12) {
+        return months[month - 1];
+    }
+
+    return "";
+}
 
 const ArticleNews = (props) => {
     const [results, setResults] = useState([]);
@@ -40,23 +54,12 @@ const ArticleNews = (props) => {
                         const date = new Date(unixTimestamp * 1000); // Convert Unix timestamp to milliseconds
                         const dayOfMonth = date.getDate();
 
-                        function getThreeLetterMonth(month) {
-                            const months = [
-                                "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                                "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-                            ];
-                        
-                            if (month >= 1 && month <= 12) {
-                                return months[month - 1];
-                            }
-                        
-                            return "";
-                        }
-
                         return (
                             <div className="article-stack" key={index}>
                                 <div className="img-yellow-stack">
+                                    <Link to={`/article/${article.id}`}>
                                     <img src={article.imageUrl} alt={article.title} />
+                                    </Link>
                                     <div className="yellow-box">
                                         <h5>{dayOfMonth}</h5>
                                         <p>{getThreeLetterMonth(date.getMonth() + 1)}</p> 
