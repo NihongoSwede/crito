@@ -57,7 +57,7 @@ const ArticleNews = (props) => {
                         return (
                             <div className="article-stack" key={index}>
                                 <div className="img-yellow-stack">
-                                    <Link to={`/article/${article.id}`}>
+                                    <Link key={article.id} to={`/article/${article.id}`}>
                                     <img src={article.imageUrl} alt={article.title} />
                                     </Link>
                                     <div className="yellow-box">

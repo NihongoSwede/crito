@@ -1,56 +1,61 @@
 import React, { useEffect, useState } from 'react';
-import largepic from '../Assets/largepic.svg';
 import quotationmark from '../Assets/quotationmark.svg';
 import oval1 from '../Assets/Oval.svg';
 import oval2 from '../Assets/Oval Copy.svg';
 import { useParams } from 'react-router-dom';
 
-
 const LongArticleNews = () => {
-    const { articleId } = useParams();
-    const [article, setArticle] = useState(null);
+    const { id } = useParams();
+    const [article, setArticle] = useState({});
 
     useEffect(() => {
-        const apiUrl = `https://win23-assignment.azurewebsites.net/api/articles/${articleId}`;
+        getProduct();
+    }, [id]);
 
-        const fetchData = async () => {
-            try {
-                const response = await fetch(apiUrl);
+    const formatDate = (dateString) => {
+        const options = { year: 'numeric', month: 'short', day: 'numeric' };
+        return new Date(dateString).toLocaleDateString('en-US', options);
+    };
+
+    const getProduct = async () => {
+        try {
+            const response = await fetch(`https://win23-assignment.azurewebsites.net/api/articles/${id}`);
+    
+            if (response.status === 200) {
                 const data = await response.json();
                 setArticle(data);
-            } catch (error) {
-                console.error("Error fetching data:", error);
+            } else {
+                console.error("Error fetching data:", response.statusText);
             }
-        };
+        } catch (error) {
+            console.error("Error fetching data:", error);
+        }
+    }
 
-        fetchData();
-    }, [articleId]);
-
-    
-    
     return (
-
         <section className="LongArticleNews">
             <div className="container">
-                <div className="articleContainer">
-                    <h3>How To Use Digitalization <br/> In The Classroom </h3>
+                <div className="articleContainer"> 
+                    <h3>{article.title}</h3>
                     <div className="articleGroupsheader">
                         <div className="articlepart1">
-                            <p>Mar 25, 2023</p>
+                            <p>{formatDate(article.published)}</p>
                             <img src={oval1} alt="Date oval" />
-                            <p>Business</p>
+                            <p>{article.category}</p>
                             <img src={oval2} alt="Category oval" />
-                            <p>Kimberly Hansen</p>
+                            <p>{article.author}</p>
                         </div>
-                        <div/>
-                        <img src={largepic} className="largepicArticle" alt="Large article image" />
+                        <div className='boxforimg'>
+                            <img src={article.imageUrl} alt="Large article image" />
+                        </div>
+                    
                         <div className="articleLongtext">
                             <div className="articleLongtextSection">
                                 {[...Array(4)].map((_, index) => (
                                     <div key={index} className="paragraphformat">
                                         {index === 0 && (
                                             <span>
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+                                                {article.content}
                                             </span>
                                         )}
                                         {index === 1 && (

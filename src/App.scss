@@ -2748,9 +2748,18 @@ iframe{
 
                     img{
                         margin-bottom: 20px;
+                        
                     }
-    
 
+                    
+
+                }
+
+                .boxforimg{
+                    img{
+                        width: 100%; /* Adjust this as needed */
+                        height: 30rem; /* Maintain aspect ratio */
+                    }
                 }
                                 
                 
@@ -2788,6 +2797,7 @@ iframe{
                     .flexquotation{
                         img{
                             margin-right: 22px;
+                            
 
                         }
                     }

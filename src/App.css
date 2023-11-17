@@ -1919,6 +1919,10 @@ iframe {
 .LongArticleNews .container .articleContainer .articleGroupsheader .articlepart1 img {
   margin-bottom: 20px;
 }
+.LongArticleNews .container .articleContainer .articleGroupsheader .boxforimg img {
+  width: 100%; /* Adjust this as needed */
+  height: 30rem; /* Maintain aspect ratio */
+}
 .LongArticleNews .container .articleContainer .articleLongtext {
   margin-top: 53px;
 }
