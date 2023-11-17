@@ -6,7 +6,7 @@ import FooterPart from '../Components/FooterPart'
 import CopyRight from '../Components/CopyRight'
 import LongArticleNews from '../Components/LongArticleNews'
 
-const Sevices = () => {
+const LongNews = () => {
   const backgroundColor1 = '#F0EFE9';
   return (
     <>
@@ -23,4 +23,4 @@ const Sevices = () => {
   )
 }
 
-export default Sevices
+export default LongNews

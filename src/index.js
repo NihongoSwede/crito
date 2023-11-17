@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom/client';
 import Home from './views/Home';
 import Contacts from './views/Contacts';
 import News from './views/News';
-import Services from './views/Services';
+import Services from './views/LongNews';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
-import LongArticleNews from './Components/LongArticleNews';
+import LongNews from './views/LongNews';
+import NotFound from './views/NotFound';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,8 +20,8 @@ root.render(
         <Route path='/' element={<Home/>} />
         <Route path='/Contacts' element={<Contacts/>} />
         <Route path='/News' element={<News/>} />
-        <Route path='/Services' element={<Services/>} />
-        <Route path='/article/:id' element={<Services />} />
+        <Route path='/Services' element={<NotFound/>} />
+        <Route path='/article/:id' element={<LongNews />} />
 
       </Routes>
     </BrowserRouter>
