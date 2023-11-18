@@ -1,36 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import quotationmark from '../Assets/quotationmark.svg';
 import oval1 from '../Assets/Oval.svg';
 import oval2 from '../Assets/Oval Copy.svg';
 import { useParams } from 'react-router-dom';
+import { useArticles } from './ArticleContext'; // Replace with the correct path
+
 
 const LongArticleNews = () => {
     const { id } = useParams();
-    const [article, setArticle] = useState({});
-
+    const { article, formatDate, getProduct } = useArticles();
+  
     useEffect(() => {
-        getProduct();
+      getProduct(id);
     }, [id]);
-
-    const formatDate = (dateString) => {
-        const options = { year: 'numeric', month: 'short', day: 'numeric' };
-        return new Date(dateString).toLocaleDateString('en-US', options);
-    };
-
-    const getProduct = async () => {
-        try {
-            const response = await fetch(`https://win23-assignment.azurewebsites.net/api/articles/${id}`);
-    
-            if (response.status === 200) {
-                const data = await response.json();
-                setArticle(data);
-            } else {
-                console.error("Error fetching data:", response.statusText);
-            }
-        } catch (error) {
-            console.error("Error fetching data:", error);
-        }
-    }
 
     return (
         <section className="LongArticleNews">

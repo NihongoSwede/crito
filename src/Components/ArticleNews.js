@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState} from 'react';
 import dots from '../Assets/DotsIMG/dot(1) (1).svg';
 import { Link } from 'react-router-dom';
+import { useArticles } from './ArticleContext';
 
-const url = "https://win23-assignment.azurewebsites.net/api/articles";
 
 function getThreeLetterMonth(month) {
     const months = [
@@ -18,23 +18,8 @@ function getThreeLetterMonth(month) {
 }
 
 const ArticleNews = (props) => {
-    const [results, setResults] = useState([]);
-    const controller = new AbortController();
-
-    useEffect(() => {
-        async function fetchData() {
-            try {
-                const response = await fetch(url, { signal: controller.signal });
-                const data = await response.json();
-                setResults(data);
-            } catch (error) {
-                console.error("Error fetching data:", error);
-            }
-        }
-
-        fetchData();
-    }, []);
-
+    const { results, getProduct } = useArticles(); // Assuming useApi is your hook providing results
+  
     const limitedResults = results.slice(0, props.sliceNumber || 3);
 
     return (
