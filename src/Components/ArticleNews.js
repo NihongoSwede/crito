@@ -18,7 +18,7 @@ function getThreeLetterMonth(month) {
 }
 
 const ArticleNews = (props) => {
-    const { results, getProduct } = useArticles(); // Assuming useApi is your hook providing results
+    const { results, getProduct } = useArticles(); 
   
     const limitedResults = results.slice(0, props.sliceNumber || 3);
 
@@ -41,15 +41,17 @@ const ArticleNews = (props) => {
 
                         return (
                             <div className="article-stack" key={index}>
+                                <Link key={article.id} to={`/article/${article.id}`}>
                                 <div className="img-yellow-stack">
-                                    <Link key={article.id} to={`/article/${article.id}`}>
+                                    
                                     <img src={article.imageUrl} alt={article.title} />
-                                    </Link>
+                            
                                     <div className="yellow-box">
                                         <h5>{dayOfMonth}</h5>
                                         <p>{getThreeLetterMonth(date.getMonth() + 1)}</p> 
                                     </div>
                                 </div>
+                                </Link>
                                 <div className="experiment">
                                     <p>{article.category}</p>
                                     <h3 className="newsInfo">{article.title}</h3>

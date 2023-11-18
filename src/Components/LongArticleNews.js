@@ -3,7 +3,7 @@ import quotationmark from '../Assets/quotationmark.svg';
 import oval1 from '../Assets/Oval.svg';
 import oval2 from '../Assets/Oval Copy.svg';
 import { useParams } from 'react-router-dom';
-import { useArticles } from './ArticleContext'; // Replace with the correct path
+import { useArticles } from './ArticleContext'; 
 
 
 const LongArticleNews = () => {

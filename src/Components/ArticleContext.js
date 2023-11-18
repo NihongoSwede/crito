@@ -20,6 +20,7 @@ export const ArticleProvider = ({ children }) => {
       const response = await fetch(url, { signal: controller.signal });
       const data = await response.json();
       setResults(data);
+      
     } catch (error) {
       console.error("Error fetching data:", error);
     }

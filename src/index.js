@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import Home from './views/Home';
 import Contacts from './views/Contacts';
 import News from './views/News';
-import Services from './views/LongNews';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
