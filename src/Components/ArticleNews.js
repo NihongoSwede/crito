@@ -35,8 +35,8 @@ const ArticleNews = (props) => {
 
                 <div className="article-showcase">
                     {limitedResults.map((article, index) => {
-                        const unixTimestamp = Math.floor(new Date(article.published).getTime() / 1000); // Convert to Unix timestamp
-                        const date = new Date(unixTimestamp * 1000); // Convert Unix timestamp to milliseconds
+                        const unixTimestamp = Math.floor(new Date(article.published).getTime() / 1000); 
+                        const date = new Date(unixTimestamp * 1000); 
                         const dayOfMonth = date.getDate();
 
                         return (
