@@ -5,7 +5,7 @@ import logo5 from '../Assets/companyLogos/logo3.png';
 import logo1 from '../Assets/companyLogos/logo4.png';
 import logo2 from '../Assets/companyLogos/logo5.png';
 
-// Define the list of images
+
 const list = [logo3, logo4, logo5, logo1, logo2];
 
 const CompanyShowcase = () => {
